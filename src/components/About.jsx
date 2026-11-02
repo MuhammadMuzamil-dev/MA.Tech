@@ -46,15 +46,26 @@ const About = () => {
           <motion.div variants={itemVariants}>
             <h2 className="mb-6 text-4xl font-bold">About Me</h2>
             <div className="mb-8 space-y-4 leading-relaxed text-muted-foreground">
-              {portfolioData.profile.longBio.split(". ").map((sentence, index) => sentence && <p key={index}>{sentence.replace(/\.$/, "")}.</p>)}
+              {portfolioData.profile.longBio
+                .split(". ")
+                .map(
+                  (sentence, index) =>
+                    sentence && (
+                      <p key={index}>{sentence.replace(/\.$/, "")}.</p>
+                    ),
+                )}
             </div>
 
             <div className="grid grid-cols-2 gap-4">
               {portfolioData.profile.stats.map((stat) => (
                 <Card key={stat.label} className="border-white/5 bg-card/50">
                   <CardContent className="p-4 text-center">
-                    <div className="text-gradient mb-1 text-3xl font-bold">{stat.value}</div>
-                    <div className="text-xs uppercase tracking-normal text-muted-foreground">{stat.label}</div>
+                    <div className="text-gradient mb-1 text-3xl font-bold">
+                      {stat.value}
+                    </div>
+                    <div className="text-xs uppercase tracking-normal text-muted-foreground">
+                      {stat.label}
+                    </div>
                   </CardContent>
                 </Card>
               ))}

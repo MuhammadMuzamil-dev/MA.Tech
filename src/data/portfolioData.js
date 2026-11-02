@@ -109,7 +109,7 @@ export const portfolioData = {
     {
       id: 3,
       role: "BSCS Student",
-      company: "University of Lahore",
+      company: "Government College University Lahore",
       period: "2022 - Present",
       description: [
         "Currently pursuing a Bachelor's in Computer Science.",
